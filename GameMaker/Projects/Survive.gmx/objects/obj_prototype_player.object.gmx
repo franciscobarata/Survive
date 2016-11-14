@@ -27,24 +27,26 @@
             <kind>1</kind>
             <string>if(keyboard_check(vk_down))
 {
-        phy_position_x-=lengthdir_x(1, -phy_rotation)*3;
-        phy_position_y-=lengthdir_y(1, -phy_rotation)*3;
+    phy_rotation = 90;
+    phy_position_y += 3;
 }
 
 if(keyboard_check(vk_up))
 {
-    phy_position_x+=lengthdir_x(1, -phy_rotation)*3;
-    phy_position_y+=lengthdir_y(1, -phy_rotation)*3;
+    phy_rotation = 270;
+    phy_position_y -= 3;
 }
 
 if(keyboard_check(vk_right))
 {
-    phy_rotation +=3;;
+    phy_rotation = 0;;
+    phy_position_x += 3;
 }
 
 if(keyboard_check(vk_left))
 {
-    phy_rotation -=3;
+    phy_rotation = 180;
+    phy_position_x -= 3;
 }
 </string>
           </argument>
