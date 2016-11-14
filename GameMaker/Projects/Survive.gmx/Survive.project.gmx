@@ -24,7 +24,6 @@
     <background>background\bg_prototype_floor</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\obj_prototype_player</object>
     <object>objects\obj_prototype_npc</object>
