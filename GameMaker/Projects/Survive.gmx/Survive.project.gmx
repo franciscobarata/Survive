@@ -18,11 +18,16 @@
     <sprite>sprites\spr_prototype_door</sprite>
     <sprite>sprites\spr_prototype_light</sprite>
     <sprite>sprites\spr_prototype_celldoor</sprite>
+    <sprite>sprites\sprite11</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_prototype_floor</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\script_npc_idle.gml</script>
+    <script>scripts\script_npc_chase.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\RoughTypewriter</font>
   </fonts>
