@@ -5,7 +5,6 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
     <sound>sound\sound_background</sound>
   </sounds>
   <sprites name="sprites">
@@ -24,6 +23,9 @@
     <background>background\bg_prototype_floor</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\RoughTypewriter</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_prototype_player</object>
     <object>objects\obj_prototype_npc</object>
@@ -36,6 +38,8 @@
     <object>objects\obj_prototype_light</object>
     <object>objects\obj_prototype_celldoor</object>
     <object>objects\obj_prototype_background_sound</object>
+    <object>objects\obj_prototype_hiding_obstacle</object>
+    <object>objects\obj_prototype_obstacles</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prototype</room>
