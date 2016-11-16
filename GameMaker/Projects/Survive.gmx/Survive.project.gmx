@@ -27,6 +27,7 @@
   <scripts name="scripts">
     <script>scripts\script_npc_idle.gml</script>
     <script>scripts\script_npc_chase.gml</script>
+    <script>scripts\script_npc_conversation.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\RoughTypewriter</font>
