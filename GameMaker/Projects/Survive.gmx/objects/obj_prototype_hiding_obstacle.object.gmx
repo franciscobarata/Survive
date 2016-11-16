@@ -96,7 +96,9 @@ else
 
 draw_set_font(RoughTypewriter);
 draw_set_color(c_white);
-draw_text(0,0, stringText);
+draw_text(88,12, stringText);
+
+
 </string>
           </argument>
         </arguments>
