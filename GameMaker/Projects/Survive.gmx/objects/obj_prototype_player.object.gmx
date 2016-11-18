@@ -50,9 +50,9 @@ isHiding = false;
           <argument>
             <kind>1</kind>
             <string>if(keyboard_check(ord("H"))) {
-    speed = 1.5;
+    speed = 1;
 } else {
-    speed = 3;
+    speed = 2;
 }
 
 if(keyboard_check(vk_down))
@@ -77,6 +77,13 @@ if(keyboard_check(vk_left))
 {
     phy_rotation = 180;
     phy_position_x -= speed;
+}
+
+
+if(point_in_rectangle(x, y, obj_prototype_hiding_obstacle.x, obj_prototype_hiding_obstacle.y, obj_prototype_hiding_obstacle.x + obj_prototype_hiding_obstacle.sprite_width, obj_prototype_hiding_obstacle.y + obj_prototype_hiding_obstacle.sprite_height)) {
+        isHiding = true;
+} else {
+    isHiding = false;
 }
 </string>
           </argument>

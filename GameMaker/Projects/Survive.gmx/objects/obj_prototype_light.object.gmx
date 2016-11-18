@@ -50,14 +50,19 @@ degree = 1;
           <argument>
             <kind>1</kind>
             <string>phy_rotation = obj_prototype_enemy.phy_rotation + variation;
+xPos = obj_prototype_enemy.sprite_width*0.5*cos(obj_prototype_enemy.phy_rotation*pi/180);
+yPos = obj_prototype_enemy.sprite_height*0.5*sin(obj_prototype_enemy.phy_rotation*pi/180);
+phy_position_x = obj_prototype_enemy.phy_position_x + xPos;
+phy_position_y = obj_prototype_enemy.phy_position_y + yPos;
 
-phy_position_x = obj_prototype_enemy.phy_position_x + obj_prototype_enemy.sprite_width*0.5*cos(obj_prototype_enemy.phy_rotation);
-phy_position_y = obj_prototype_enemy.phy_position_y + obj_prototype_enemy.sprite_height*0.5*sin(obj_prototype_enemy.phy_rotation);
 
+if(obj_prototype_enemy.obstacleHit)
+    variation = 0;
+else    
+    variation += degree;
+    
 if(variation == 60 || variation == -60)
     degree = degree * -1;
-    
-variation += degree;
 </string>
           </argument>
         </arguments>
@@ -65,7 +70,7 @@ variation += degree;
     </event>
   </events>
   <PhysicsObject>-1</PhysicsObject>
-  <PhysicsObjectSensor>0</PhysicsObjectSensor>
+  <PhysicsObjectSensor>-1</PhysicsObjectSensor>
   <PhysicsObjectShape>2</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>

@@ -59,11 +59,6 @@
     showText = false;
     image_alpha = 1.0;
     phy_active = true;
-    obj_prototype_player.isHiding = false;
-}
-
-if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x, y, x + sprite_width, y + sprite_height)) {
-        obj_prototype_player.isHiding = true;
 }
 </string>
           </argument>
