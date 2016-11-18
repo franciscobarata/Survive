@@ -46,6 +46,7 @@
     <object>objects\obj_prototype_background_sound</object>
     <object>objects\obj_prototype_hiding_obstacle</object>
     <object>objects\obj_prototype_obstacles</object>
+    <object>objects\obj_prototype_lighting</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prototype</room>
