@@ -58,11 +58,6 @@ speed = 1.5;
 }
     phy_position_x += speed;
     
-direction--;
-if(direction == 0) {
-    phy_position_y += speed;
-    direction = floor(random(100));
-}
 </string>
           </argument>
         </arguments>

@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>//
 isHiding = false;
+
+global.nSaved = 0;
 </string>
           </argument>
         </arguments>
@@ -157,9 +159,9 @@ if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obsta
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!isHiding) {
-    game_restart();
-}
+            <string>if(!isHiding)
+    room_goto(rm_prototype_caught);
+    
 </string>
           </argument>
         </arguments>
@@ -183,6 +185,10 @@ if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obsta
           <argument>
             <kind>1</kind>
             <string>//Collide
+if(global.inventory[0] != -1)
+{
+    room_goto(rm_prototype_end);
+}
 </string>
           </argument>
         </arguments>
@@ -191,17 +197,25 @@ if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obsta
     <event eventtype="4" ename="obj_prototype_enemy">
       <action>
         <libid>1</libid>
-        <id>331</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_restart_game</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!isHiding)
+    room_goto(rm_prototype_caught);
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_prototype_npc">

@@ -21,6 +21,7 @@
     <sprite>sprites\sprite11</sprite>
     <sprite>sprites\spr_inv_border</sprite>
     <sprite>sprites\sprite12</sprite>
+    <sprite>sprites\spr_prototype_logo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_prototype_floor</background>
@@ -52,9 +53,13 @@
     <object>objects\obj_prototype_obstacles</object>
     <object>objects\obj_prototype_lighting</object>
     <object>objects\obj_inventory</object>
+    <object>objects\obj_prototype_game_end_text</object>
+    <object>objects\obj_prototype_caught_text</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prototype</room>
+    <room>rooms\rm_prototype_end</room>
+    <room>rooms\rm_prototype_caught</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
