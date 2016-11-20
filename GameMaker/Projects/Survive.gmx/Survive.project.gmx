@@ -20,6 +20,7 @@
     <sprite>sprites\spr_prototype_celldoor</sprite>
     <sprite>sprites\sprite11</sprite>
     <sprite>sprites\spr_inv_border</sprite>
+    <sprite>sprites\sprite12</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_prototype_floor</background>
@@ -30,6 +31,7 @@
     <script>scripts\script_npc_chase.gml</script>
     <script>scripts\script_npc_conversation.gml</script>
     <script>scripts\script_item_pickup.gml</script>
+    <script>scripts\script_item_drop.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\RoughTypewriter</font>
