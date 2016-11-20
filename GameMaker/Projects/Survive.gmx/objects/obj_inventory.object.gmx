@@ -34,8 +34,10 @@ maxItems = 10;
 
 for (i=0; i &lt; maxItems; i++)
 {
-    inventory[i] = -1;
+    global.inventory[i] = -1;
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -75,6 +77,10 @@ for (i=0; i &lt; maxItems; i++)
     for (i = 0; i &lt; maxItems; i++)
     {
         draw_sprite(spr_inv_border, 0, x1 + 400 + (i * 24), y2 + 164)
+        if (global.inventory[i] != -1)
+        {
+            draw_sprite(spr_prototype_key, global.inventory[i], x1 + 400 - 6 + (i * 24), y2 + 164 + 6)
+        }
     }
 }
 
