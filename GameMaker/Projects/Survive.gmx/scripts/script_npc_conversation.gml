@@ -7,9 +7,9 @@ if(mouse_check_button_pressed(mb_left) && countm == 0){
     countm ++;
 }
 
-else if(mouse_check_button_pressed(mb_left) && countm == 1){
+else if(mouse_check_button_pressed(mb_left) && countm >= 1){
 
-    message = "if you help me escape, ill give you that!";
+    message = "if you help me escape, ill give you that information!";
     countm ++;
     
 }

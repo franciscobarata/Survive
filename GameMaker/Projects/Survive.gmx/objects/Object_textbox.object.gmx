@@ -148,7 +148,7 @@ if(string_width(str) &gt; (width - padding - padding) ) {
 }
 
 //make sure we have not reached the end of the message
-if(count &lt; string_length( message)){
+if(count &lt; string_length(message)){
     if(string_char_at (message, count) == " ") {
         last_space = count;
     }
@@ -168,7 +168,9 @@ str = string_copy( message, ds_list_find_value(start,line), count-ds_list_find_v
 
 
 //draw the text
-draw_text (x+padding,y+padding,str);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_text(x+padding,y+padding,str);
 </string>
           </argument>
         </arguments>
