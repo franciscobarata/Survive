@@ -1,15 +1,15 @@
 
 
-if(mouse_check_button_pressed(mb_left) && count == 0){
+if(mouse_check_button_pressed(mb_left) && countm == 0){
 
-    text = 'Look friend, I have something which might help you escape this dreadfull place';
+    message = "Look friend, I have something which might help you escape this dreadfull place";
     mouse_clear(mb_left);
-    count ++;
+    countm ++;
 }
 
-else if(mouse_check_button_pressed(mb_left) && count == 1){
+else if(mouse_check_button_pressed(mb_left) && countm == 1){
 
-    text = 'if you help me escape, ill give you that!';
-    count ++;
+    message = "if you help me escape, ill give you that!";
+    countm ++;
     
 }

@@ -55,6 +55,7 @@
     <object>objects\obj_inventory</object>
     <object>objects\obj_prototype_game_end_text</object>
     <object>objects\obj_prototype_caught_text</object>
+    <object>objects\Object_textbox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prototype</room>
