@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
-  <persistent>0</persistent>
+  <depth>-1000</depth>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,7 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.light=surface_create(room_width,room_height);
+            <string>
+globalvar showInv;
+showInv = true;
+
+globalvar maxItems;
+maxItems = 10;
+
+for (i=0; i &lt; maxItems; i++)
+{
+    inventory[i] = -1;
+}
 </string>
           </argument>
         </arguments>
@@ -48,39 +58,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var bbb, i;
-
-bbb=20//Precision. The higher the number, the more sprite will be drawn.
-
-
-surface_set_target(global.light)/*With this function you set all further drawing to
-                                the target surface rather than the screen and in this
-                                way you can tell GameMaker:Studio to only draw
-                                specific things to the specified surface.*/
-
-draw_clear_alpha(c_black,0.5)//That line make the screen black with an alpha at 0.85
-draw_set_blend_mode(bm_subtract) //We're starting to substract here
-
-for (i=0; i&lt;=bbb; i+=1)//Now we're looping through all our sprite. From the original scale to the smaller one.
+            <string>if(showInv)
 {
-    draw_sprite_ext(spr_prototype_light, 0, obj_prototype_enemy.x+obj_prototype_enemy.sprite_width*0.5*cos(obj_prototype_enemy.phy_rotation*pi/180), obj_prototype_enemy.y+obj_prototype_enemy.sprite_height*0.5*sin(obj_prototype_enemy.phy_rotation*pi/180), (1-(1/bbb*i)), (1-(1/bbb*i)), obj_prototype_light.image_angle, c_white, 1/bbb)
+    var x1, x2, y1, y2;
+    x1 = view_xview[0];
+    x2 = x1 + view_wview[0];
+    y1 = view_yview[0];
+    y2 = y1 + 64;
+    
+    draw_set_color(c_black);
+    draw_set_alpha(0.8);
+    draw_rectangle(x1, x2, y1, y2, 0);
+    draw_set_alpha(1);
+
+    
+    for (i = 0; i &lt; maxItems; i++)
+    {
+        draw_sprite(spr_inv_border, 0, x1 + 400 + (i * 24), y2 + 164)
+    }
 }
 
-draw_set_alpha(1)//Important line to reset the alpha back to 1.
-draw_set_blend_mode(bm_normal)//Important thing here! Stop to substract.
-surface_reset_target()//With this function you reset all further drawing from the target surface back to the screen.
-
-
-
-if surface_exists(global.light)//A safe way to avoid errors. If it exist, draw it. If not create it.
-{
-    draw_surface(global.light,0,0)
-}
-
-else
-{
-    global.light=surface_create(room_width,room_height)
-}
 </string>
           </argument>
         </arguments>

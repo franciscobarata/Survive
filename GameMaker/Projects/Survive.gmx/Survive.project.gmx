@@ -19,6 +19,7 @@
     <sprite>sprites\spr_prototype_light</sprite>
     <sprite>sprites\spr_prototype_celldoor</sprite>
     <sprite>sprites\sprite11</sprite>
+    <sprite>sprites\spr_inv_border</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_prototype_floor</background>
@@ -47,6 +48,7 @@
     <object>objects\obj_prototype_hiding_obstacle</object>
     <object>objects\obj_prototype_obstacles</object>
     <object>objects\obj_prototype_lighting</object>
+    <object>objects\obj_inventory</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prototype</room>
