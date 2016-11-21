@@ -55,7 +55,7 @@ sight_range = choose(100);
             <string>showText2 = obj_prototype_player.isTouching;
 var dis = point_distance(x, y, obj_prototype_npc.x , obj_prototype_npc.y);
 if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_prototype_player.sprite_width, y - obj_prototype_player.sprite_height, x + sprite_width + obj_prototype_player.sprite_width, y + sprite_height + obj_prototype_player.sprite_height)) {
-    //showText = true;
+    //showText2 = true;
     if(keyboard_check(ord("F"))) {
         image_alpha = 0;
         phy_active = false;
@@ -66,7 +66,7 @@ if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_pr
            Object_textbox.message = "Oh My God, Thank you so much! There's a key in the table ahead, lets grab it!";
         }
     }
-    }
+}
 </string>
           </argument>
         </arguments>
@@ -92,13 +92,13 @@ if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_pr
             <string>draw_self();
 
 if(showText2)
-    stringText = "Press 'F' to Open the cell door";
+    stringText2 = "Press 'F' to Open the cell door";
 else 
-    stringText = "";
+    stringText2 = "";
 
 draw_set_font(RoughTypewriter);
 draw_set_color(c_white);
-draw_text(88,12, stringText);
+draw_text(0,0, stringText2);
 </string>
           </argument>
         </arguments>

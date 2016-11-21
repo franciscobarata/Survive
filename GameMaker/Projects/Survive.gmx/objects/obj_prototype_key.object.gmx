@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="6" enumb="4">
+    <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,10 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-d_mouse = point_distance(mouse_x, mouse_y, self.x + (self.sprite_width/2), self.y + (self.sprite_height)/2);
-d_character = point_distance(obj_prototype_player.x, obj_prototype_player.y, self.x + (self.sprite_width/2), self.y + (self.sprite_height)/2);
-if (d_mouse &lt; self.sprite_width/2 &amp;&amp; d_character &lt; self.sprite_width*2) {
+            <string>d_character = point_distance(obj_prototype_player.x, obj_prototype_player.y, self.x + (self.sprite_width/2), self.y + (self.sprite_height)/2);
+if (d_character &lt; self.sprite_width*2) {
     script_item_pickup(0);
     instance_destroy();
 }
