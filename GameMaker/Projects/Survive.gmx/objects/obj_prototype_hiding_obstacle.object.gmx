@@ -49,19 +49,67 @@ phy_active = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>showText = obj_prototype_player.isHiding;
-if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_prototype_player.sprite_width, y - obj_prototype_player.sprite_height, x + sprite_width + obj_prototype_player.sprite_width, y + sprite_height + obj_prototype_player.sprite_height)) {
-    //showText = true;
+            <string>//showText = obj_prototype_player.isHiding;
+if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_prototype_player.sprite_width, y - obj_prototype_player.sprite_height, x + sprite_width + obj_prototype_player.sprite_width, y + sprite_height + obj_prototype_player.sprite_height)) 
+//if(collision_rectangle(phy_position_x, phy_position_y, phy_position_x + sprite_width, phy_position_y + sprite_height, obj_prototype_player, false, false))
+{
+    showText = true;
     if(keyboard_check(ord("H"))) {
         image_alpha = 0.55;
         phy_active = false;
     }
     
 } else if(!place_meeting(x, y, obj_prototype_player)) {
-    //showText = false;
+    showText = false;
     image_alpha = 1.0;
     phy_active = true;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_prototype_obstacles">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//collide
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_prototype_hiding_obstacle">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//collide
 </string>
           </argument>
         </arguments>

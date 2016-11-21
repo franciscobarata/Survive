@@ -165,6 +165,7 @@
     <instance objName="obj_bed" x="1152" y="160" name="inst_457AA75E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bed" x="1024" y="160" name="inst_CD23FAD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_table" x="416" y="480" name="inst_CA33BFBB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_background_sound" x="0" y="288" name="inst_CB3B65A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

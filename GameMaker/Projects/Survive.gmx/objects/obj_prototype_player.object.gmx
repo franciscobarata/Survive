@@ -29,7 +29,7 @@
 isHiding = false;
 isTouching = false;
 isStealthing = false;
-
+speed = 2;
 global.nSaved = 0;
 </string>
           </argument>
@@ -77,20 +77,25 @@ if(keyboard_check(vk_left) || keyboard_check(ord('A')))
     phy_position_x -= speed;
 }
 
-if(collision_circle(phy_position_x, phy_position_y, sprite_width, obj_prototype_hiding_obstacle, true, false)) {
-    isHiding = true;
-    isStealthing = true;
-} else {
-    if(keyboard_check(ord("H"))) {
-        speed = 1;
+//if(collision_circle(phy_position_x, phy_position_y, sprite_width*0.5, obj_prototype_hiding_obstacle, false, false)) 
+var inst;
+inst = collision_circle(phy_position_x, phy_position_y, sprite_width*0.5, obj_prototype_hiding_obstacle, true, false);
+if(inst != noone) {
+    if(inst.bbox_left &lt;= phy_position_x-sprite_width*0.5 &amp;&amp; inst.bbox_top &lt;= phy_position_y-sprite_height*0.5 &amp;&amp; inst.bbox_right &gt;= phy_position_x+sprite_width*0.5 &amp;&amp; inst.bbox_bottom &gt;= phy_position_y+sprite_height*0.5)
+    {
+        isHiding = true;
         isStealthing = true;
     } else {
-        speed = 2;
-        isStealthing = false;
+        if(keyboard_check(ord("H"))) {
+            speed = 1;
+            isStealthing = true;
+        } else {
+            speed = 2;
+            isStealthing = false;
+        }
+        isHiding = false;
     }
-    isHiding = false;
 }
-
 if(instance_place(phy_position_x, phy_position_y, obj_prototype_celldoor)) {
     isTouching = true;
 } else {
