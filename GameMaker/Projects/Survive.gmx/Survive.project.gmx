@@ -29,8 +29,12 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\script_npc_idle.gml</script>
+    <script>scripts\script_npc_stop.gml</script>
+    <script>scripts\script_text_idle.gml</script>
     <script>scripts\script_npc_chase.gml</script>
     <script>scripts\script_npc_conversation.gml</script>
+    <script>scripts\script_text_conversation.gml</script>
+    <script>scripts\script_text_conversation2.gml</script>
     <script>scripts\script_item_pickup.gml</script>
     <script>scripts\script_item_drop.gml</script>
   </scripts>

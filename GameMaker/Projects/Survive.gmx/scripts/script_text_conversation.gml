@@ -13,7 +13,3 @@ if(mouse_check_button_pressed(mb_left) && countm == 1){
     //mouse_clear(mb_left);
     alpha = 0;
 }
-
-if (obj_prototype_celldoor.isOpen) {
-    obj_prototype_npc.state = script_npc_chase;     
-}
