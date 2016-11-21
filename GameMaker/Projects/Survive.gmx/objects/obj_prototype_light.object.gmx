@@ -57,7 +57,7 @@ phy_position_x = obj_prototype_enemy.phy_position_x + xPos;
 phy_position_y = obj_prototype_enemy.phy_position_y + yPos;
 
 
-if(obj_prototype_enemy.obstacleHit)
+if(obj_prototype_enemy.obstacleHit || obj_prototype_enemy.isAware)
     variation = 0;
 else    
     variation += degree;

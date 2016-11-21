@@ -22,6 +22,7 @@
     <sprite>sprites\spr_inv_border</sprite>
     <sprite>sprites\sprite12</sprite>
     <sprite>sprites\spr_prototype_logo</sprite>
+    <sprite>sprites\spr_bed</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_prototype_floor</background>
@@ -60,9 +61,11 @@
     <object>objects\obj_prototype_game_end_text</object>
     <object>objects\obj_prototype_caught_text</object>
     <object>objects\Object_textbox</object>
+    <object>objects\obj_bed</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prototype</room>
+    <room>rooms\room3</room>
     <room>rooms\rm_prototype_end</room>
     <room>rooms\rm_prototype_caught</room>
   </rooms>

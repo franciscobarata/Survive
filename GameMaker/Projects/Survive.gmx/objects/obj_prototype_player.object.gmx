@@ -28,6 +28,7 @@
             <string>//
 isHiding = false;
 isTouching = false;
+isStealthing = false;
 
 global.nSaved = 0;
 </string>
@@ -52,13 +53,7 @@ global.nSaved = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check(ord("H"))) {
-    speed = 1;
-} else {
-    speed = 2;
-}
-
-if(keyboard_check(vk_down) || keyboard_check(ord('S')))
+            <string>if(keyboard_check(vk_down) || keyboard_check(ord('S')))
 {
     phy_rotation = 90;
     phy_position_y += speed;
@@ -82,9 +77,17 @@ if(keyboard_check(vk_left) || keyboard_check(ord('A')))
     phy_position_x -= speed;
 }
 
-if(instance_place(phy_position_x, phy_position_y, obj_prototype_hiding_obstacle)) {
+if(collision_circle(phy_position_x, phy_position_y, sprite_width, obj_prototype_hiding_obstacle, true, false)) {
     isHiding = true;
+    isStealthing = true;
 } else {
+    if(keyboard_check(ord("H"))) {
+        speed = 1;
+        isStealthing = true;
+    } else {
+        speed = 2;
+        isStealthing = false;
+    }
     isHiding = false;
 }
 

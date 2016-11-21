@@ -28,6 +28,7 @@
             <string>direction = floor(random(100));
 obstacleHit = false;
 speed = 1.5;
+isAware = false;
 </string>
           </argument>
         </arguments>
@@ -57,7 +58,14 @@ speed = 1.5;
     obstacleHit = false;
 }
     phy_position_x += speed;
-    
+
+//check if player is making sound near enemy
+/*if(collision_circle(phy_position_x, phy_position_y, sprite_width*2, obj_prototype_player, false, false)) {
+    if(!obj_prototype_player.isHiding || !obj_prototype_player.isStealthing) {
+        isAware = true;
+        phy_rotation += tan(phy_position_x/phy_position_y);
+    }
+}*/
 </string>
           </argument>
         </arguments>
