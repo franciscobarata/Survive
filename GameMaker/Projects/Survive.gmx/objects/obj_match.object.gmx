@@ -29,6 +29,8 @@
 if (d_character &lt; self.sprite_width*2) {
     script_item_pickup(1);
     instance_destroy();
+    showItemText = true;
+    itemName = "match";
 }
 </string>
           </argument>

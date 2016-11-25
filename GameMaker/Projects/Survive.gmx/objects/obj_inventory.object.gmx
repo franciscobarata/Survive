@@ -31,18 +31,56 @@
 2 - Pills
 */
 
+global.timer = -1;
 
 globalvar showInv;
 showInv = true;
 
+globalvar showItemText;
+showItemText = false;
+
 globalvar maxItems;
 maxItems = 10;
+
+globalvar itemName;
+itemName = "";
 
 for (i=0; i &lt; maxItems; i++)
 {
     global.inventory[i] = -1;
 }
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (showItemText &amp;&amp; global.timer==-1)
+{
+   global.timer = 60;
+}
+if global.timer!=-1
+{
+    global.timer--;
+}
 
 </string>
           </argument>
@@ -73,13 +111,7 @@ for (i=0; i &lt; maxItems; i++)
     x2 = x1 + view_wview[0];
     y1 = view_yview[0];
     y2 = y1 + 228;
-    
-    draw_set_color(c_black);
-    draw_set_alpha(0.8);
-    draw_rectangle(x1, x2, y1, y2, 0);
-    draw_set_alpha(1);
-
-    
+        
     for (i = 0; i &lt; maxItems; i++)
     {
         draw_sprite(spr_inv_border, 0, x1 + 400 + (i * 24), y2)
@@ -87,7 +119,21 @@ for (i=0; i &lt; maxItems; i++)
         {
             draw_sprite(sprite_items, global.inventory[i], x1 + 400 - 8 + (i * 24), y2 + 12)
         }
-    }
+        if(showItemText &amp;&amp; global.timer != -1)
+        {
+            stringText = "You found a ";
+        }
+        else 
+        {
+            showItemText = false;
+            stringText = "";
+            itemName = "";
+        }    
+        
+        draw_set_font(RoughTypewriter);
+        draw_set_color(c_white);
+        draw_text(100 , y2 + 2, stringText + itemName);
+    }  
 }
 
 </string>
