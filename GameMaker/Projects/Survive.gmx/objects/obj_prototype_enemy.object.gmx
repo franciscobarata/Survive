@@ -60,12 +60,16 @@ isAware = false;
     phy_position_x += speed;
 
 //check if player is making sound near enemy
-/*if(collision_circle(phy_position_x, phy_position_y, sprite_width*2, obj_prototype_player, false, false)) {
-    if(!obj_prototype_player.isHiding || !obj_prototype_player.isStealthing) {
+if(collision_circle(phy_position_x, phy_position_y, sprite_width*2, obj_prototype_player, false, false)) {
+    if(!obj_prototype_player.isHiding &amp;&amp; !obj_prototype_player.isStealthing) {
         isAware = true;
-        phy_rotation += tan(phy_position_x/phy_position_y);
+        phy_rotation += pi - arctan(phy_position_y - obj_prototype_player.phy_position_y/phy_position_x - obj_prototype_player.phy_position_x);
     }
-}*/
+} else {
+    isAware = false;
+    if(speed == 1)
+        phy_rotation = 0;
+}
 </string>
           </argument>
         </arguments>
