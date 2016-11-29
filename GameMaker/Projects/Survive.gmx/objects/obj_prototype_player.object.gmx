@@ -85,16 +85,16 @@ if(inst != noone) {
     {
         isHiding = true;
         isStealthing = true;
+    } 
+} else {
+    if(keyboard_check(ord("H"))) {
+        speed = 1;
+        isStealthing = true;
     } else {
-        if(keyboard_check(ord("H"))) {
-            speed = 1;
-            isStealthing = true;
-        } else {
-            speed = 2;
-            isStealthing = false;
-        }
-        isHiding = false;
+        speed = 2;
+        isStealthing = false;
     }
+    isHiding = false;
 }
 if(instance_place(phy_position_x, phy_position_y, obj_prototype_celldoor)) {
     isTouching = true;

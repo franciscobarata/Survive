@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>global.showText = false;
 phy_active = true;
+moved = false;
+startPosX = x;
+startPosY = y;
 </string>
           </argument>
         </arguments>
@@ -64,6 +67,11 @@ if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_pr
     image_alpha = 1.0;
     phy_active = true;
 }
+
+if(round(phy_rotation) != 0 || round(x) != round(startPosX) || round(y) != round(startPosY))
+    moved = true;
+else
+    moved = false;
 </string>
           </argument>
         </arguments>
