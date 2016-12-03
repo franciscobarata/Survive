@@ -74,6 +74,7 @@
     <object>objects\obj_room3_sound</object>
     <object>objects\obj_infirmary_door</object>
     <object>objects\obj_infirmary_door_left</object>
+    <object>objects\obj_grid</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>

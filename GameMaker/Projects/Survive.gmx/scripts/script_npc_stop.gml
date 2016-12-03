@@ -2,7 +2,7 @@
 
 global.nSaved = 0
 
-if(instance_place(phy_position_x, phy_position_y, obj_prototype_hiding_obstacle)) {
+if(instance_place(/*phy_position_*/x, /*phy_position_*/y, obj_prototype_hiding_obstacle)) {
     isHiding = true;
 } else {
     isHiding = false;

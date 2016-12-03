@@ -45,6 +45,9 @@ stop_range = 10;
 
 image_speed = .1;
 
+path = path_add();
+
+
 </string>
           </argument>
         </arguments>
