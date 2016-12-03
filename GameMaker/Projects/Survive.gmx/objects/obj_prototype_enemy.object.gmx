@@ -52,7 +52,8 @@ detectionRadius = 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obstacleHit)
+            <string>if(obj_prototype_player.free == true){
+if(obstacleHit)
 {
     phy_rotation += 180;
     //speed = speed*-1;
@@ -82,6 +83,7 @@ if(collision_circle(phy_position_x, phy_position_y, sprite_width*detection, obj_
     isAware = false;
     if(speed == 1)
         phy_rotation = 0;
+}
 }
 </string>
           </argument>

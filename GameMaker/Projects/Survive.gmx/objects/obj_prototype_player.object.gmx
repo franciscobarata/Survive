@@ -26,10 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>//
+free = true;
 isHiding = false;
 isTouching = false;
 isStealthing = false;
-speed = 2;
+speed = 5;
 global.nSaved = 0;
 </string>
           </argument>
@@ -53,7 +54,8 @@ global.nSaved = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check(vk_down) || keyboard_check(ord('S')))
+            <string>if(free == true){
+if(keyboard_check(vk_down) || keyboard_check(ord('S')))
 {
     phy_rotation = 90;
     phy_position_y += speed;
@@ -100,6 +102,7 @@ if(instance_place(phy_position_x, phy_position_y, obj_prototype_celldoor)) {
     isTouching = true;
 } else {
     isTouching = false;
+}
 }
 </string>
           </argument>

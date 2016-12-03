@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>//create some variables
 draw = 0;
+free = true;
 //set the message
 str = "";
 
@@ -126,13 +127,13 @@ script_execute(state);
             <string>/// draw the string and the box
 if(draw == 1){
 draw_set_colour(c_white);
-draw_rectangle(0,640,640,480,false);
+draw_rectangle(view_xview[0],640,(view_xview[0] + display_get_width()),480,false);
 
 draw_set_colour(c_black);
 
 draw_set_font(RoughTypewriter);
 
-draw_text(0, 480, message_draw); //draw the text at the coordinates
+draw_text(view_xview[0], 480, message_draw); //draw the text at the coordinates
 }
 </string>
           </argument>
