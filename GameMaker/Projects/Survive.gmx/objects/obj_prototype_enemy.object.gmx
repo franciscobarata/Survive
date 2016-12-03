@@ -29,6 +29,7 @@
 obstacleHit = false;
 speed = 1.5;
 isAware = false;
+detectionRadius = 4;
 </string>
           </argument>
         </arguments>
@@ -57,11 +58,21 @@ isAware = false;
     //speed = speed*-1;
     obstacleHit = false;
 }
+
+if(isAware) {
+    detection = 8;
+} else {
+    detection = 4;
+}
+
+if(!idle) {
     phy_position_x += speed * cos(phy_rotation * pi / 180);
     phy_position_y += speed * sin(phy_rotation * pi / 180);
+}
 
 //check if player is making sound near enemy
-if(collision_circle(phy_position_x, phy_position_y, sprite_width*4, obj_prototype_player, false, false)) {
+if(collision_circle(phy_position_x, phy_position_y, sprite_width*detection, obj_prototype_player, false, false)) {
+    idle = false;
     if(!obj_prototype_player.isHiding &amp;&amp; !obj_prototype_player.isStealthing) {
         isAware = true;
         phy_rotation = -point_direction(x, y, obj_prototype_player.x, obj_prototype_player.y);

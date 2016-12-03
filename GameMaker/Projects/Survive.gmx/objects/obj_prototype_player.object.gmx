@@ -203,8 +203,7 @@ if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_celldoor.x, 
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!isHiding)
-    room_goto(rm_prototype_caught);
+            <string>//
     
 </string>
           </argument>

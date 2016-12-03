@@ -164,7 +164,7 @@
     <instance objName="obj_bed" x="1024" y="160" name="inst_CD23FAD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_table" x="416" y="480" name="inst_CA33BFBB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_wall" x="2176" y="32" name="inst_F88F4B1C" locked="0" code="visible=false;&#xA;" scaleX="0.100000001490116" scaleY="2" colour="4294967295" rotation="5"/>
-    <instance objName="obj_prototype_enemy" x="2496" y="320" name="inst_FB847355" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_enemy" x="2496" y="320" name="inst_FB847355" locked="0" code="idle = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_light" x="2528" y="320" name="inst_50E771A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_lighting" x="2496" y="320" name="inst_05F6DBEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_wall" x="2238" y="32" name="inst_273C9E79" locked="0" code="visible = false;&#xA;" scaleX="0.100000001490116" scaleY="1" colour="4294967295" rotation="0"/>
@@ -189,6 +189,9 @@
     <instance objName="obj_infirmary_door_left" x="1920" y="224" name="inst_9E2527B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door_left" x="2048" y="384" name="inst_3BAFBE3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door_left" x="928" y="384" name="inst_F3BE8404" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_enemy" x="2240" y="192" name="inst_DE209144" locked="0" code="idle = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_light" x="2240" y="192" name="inst_B1D91E07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_lighting" x="2240" y="192" name="inst_0DF3D87C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
