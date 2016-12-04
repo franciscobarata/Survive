@@ -52,20 +52,20 @@ instance = instance_nearest(x, y, obj_prototype_enemy);
           <argument>
             <kind>1</kind>
             <string>if(obj_prototype_player.free == true){
-phy_rotation = instance.phy_rotation + variation;
-xPos = instance.sprite_width*0.5*cos(instance.phy_rotation*pi/180);
-yPos = instance.sprite_height*0.5*sin(instance.phy_rotation*pi/180);
-phy_position_x = instance.phy_position_x + xPos;
-phy_position_y = instance.phy_position_y + yPos;
-
-
-if(instance.obstacleHit || instance.isAware)
-    variation = 0;
-else    
-    variation += degree;
+    phy_rotation = instance.phy_rotation + variation;
+    xPos = instance.sprite_width*0.5*cos(instance.phy_rotation*pi/180);
+    yPos = instance.sprite_height*0.5*sin(instance.phy_rotation*pi/180);
+    phy_position_x = instance.phy_position_x + xPos;
+    phy_position_y = instance.phy_position_y + yPos;
     
-if(variation == 60 || variation == -60)
-    degree = degree * -1;
+    
+    if(instance.obstacleHit || instance.isAware)
+        variation = 0;
+    else    
+        variation += degree;
+        
+    if(variation == 60 || variation == -60)
+        degree = degree * -1;
 } 
 </string>
           </argument>

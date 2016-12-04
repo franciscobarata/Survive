@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>global.light=surface_create(room_width,room_height);
+enemyInstance = instance_nearest(x, y, obj_prototype_enemy);
+lightInstance =  instance_nearest(x, y, obj_prototype_light);
 </string>
           </argument>
         </arguments>
@@ -61,7 +63,7 @@ bbb=20//Precision. The higher the number, the more sprite will be drawn.
     
     for (i=0; i&lt;=bbb; i+=1)//Now we're looping through all our sprite. From the original scale to the smaller one.
     {
-        draw_sprite_ext(spr_prototype_light, 0, obj_prototype_enemy.x+obj_prototype_enemy.sprite_width*0.5*cos(obj_prototype_enemy.phy_rotation*pi/180), obj_prototype_enemy.y+obj_prototype_enemy.sprite_height*0.5*sin(obj_prototype_enemy.phy_rotation*pi/180), (1-(1/bbb*i)), (1-(1/bbb*i)), obj_prototype_light.image_angle, c_white, 1/bbb)
+        draw_sprite_ext(spr_prototype_light, 0, enemyInstance.x+enemyInstance.sprite_width*0.5*cos(enemyInstance.phy_rotation*pi/180), enemyInstance.y+enemyInstance.sprite_height*0.5*sin(enemyInstance.phy_rotation*pi/180), (1-(1/bbb*i)), (1-(1/bbb*i)), lightInstance.image_angle, c_white, 1/bbb)
     }
     
     draw_set_alpha(1)//Important line to reset the alpha back to 1.
