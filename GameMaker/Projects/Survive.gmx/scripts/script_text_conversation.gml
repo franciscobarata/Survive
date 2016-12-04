@@ -1,4 +1,3 @@
-
     
 if (characters < message_length) { //if current character count is less than the amount in current message* 
     draw = 1;
@@ -16,11 +15,37 @@ else { //if current character is more than the amount in the current message
             message_length = string_length(message[message_current]);  //get the new character length for message
             characters = 0; //set the characters back to 0
             message_draw = ""; //clear the drawn text
+        } else {
+            if(message_current == 7 || message_current == 8){
+                draw = 0;
+                obj_prototype_player.free = true;
+                instance_destroy(); //destroy the object
+            }
         }
-        else { //if our messages are done (we reach 6, in our case)...
-            draw = 0;
-            obj_prototype_player.free = true;
-            instance_destroy(); //destroy the object
-        }
+        } else { //if our messages are done (we reach 6, in our case)...
+            if(message_current == 6){
+                global.showText = true;
+                global.hint_text = "Press 'A' to accept and 'D' to decline";
+            }
+            if(keyboard_check_pressed(ord("A"))){
+                obj_prototype_npc.state = script_npc_chase;
+                global.showText = false;
+                draw = 1;
+                obj_prototype_player.free = false;
+                message_current += 1;
+                message_length = string_length(message[message_current]);
+                characters = 0; //set the characters back to 0
+                message_draw = ""; //clear the drawn text
+            }
+            else if(keyboard_check_pressed(ord("D"))){
+                global.showText = false;
+                draw = 1;
+                obj_prototype_player.free = false;
+                message_current += 2;
+                message_length = string_length(message[message_current]);
+                characters = 0; //set the characters back to 0
+                message_draw = ""; //clear the drawn text
+            }
+            
     }
 }
