@@ -55,7 +55,9 @@ detectionRadius = 4;
             <string>if(obj_prototype_player.free == true){
 if(obstacleHit)
 {
-    phy_rotation += 180;
+    if(!isAware)
+        phy_rotation += 180;
+    
     //speed = speed*-1;
     obstacleHit = false;
 }
@@ -131,6 +133,58 @@ if(collision_circle(phy_position_x, phy_position_y, sprite_width*detection, obj_
           <argument>
             <kind>1</kind>
             <string>obstacleHit = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_infirmary_door_left">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(isAware) {
+    index = instance_nearest(phy_position_x, phy_position_y, obj_infirmary_door_left);
+    index.open = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_infirmary_door">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(isAware) {
+    index = instance_nearest(phy_position_x, phy_position_y, obj_infirmary_door_left);
+    index.open = true;
+}
 </string>
           </argument>
         </arguments>
