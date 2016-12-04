@@ -51,12 +51,13 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
+    <instance objName="obj_textbox_npc2" x="1216" y="192" name="inst_D692FA32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Object_textbox" x="864" y="416" name="inst_32EDCF9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grid" x="96" y="96" name="inst_FEF8D313" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_player" x="64" y="352" name="inst_6FE5D2CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_prototype_enemy" x="1472" y="320" name="inst_FB847355" locked="0" code="idle = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_prototype_light" x="1472" y="320" name="inst_50E771A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_prototype_lighting" x="1440" y="320" name="inst_05F6DBEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_enemy" x="2016" y="320" name="inst_FB847355" locked="0" code="idle = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_light" x="2016" y="320" name="inst_50E771A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_lighting" x="2016" y="320" name="inst_05F6DBEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_room3_sound" x="32" y="64" name="inst_7401D125" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_enemy" x="1984" y="192" name="inst_DE209144" locked="0" code="idle = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_light" x="1984" y="192" name="inst_B1D91E07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -191,7 +192,6 @@
     <instance objName="obj_prototype_wall" x="32" y="608" name="inst_95D50C4E" locked="0" code="" scaleX="15" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_wall" x="576" y="0" name="inst_BD17B926" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_wall" x="32" y="0" name="inst_5BF13444" locked="0" code="" scaleX="15" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_prototype_npc" x="896" y="448" name="inst_7F33685F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_trash" x="50" y="552" name="inst_A2098051" locked="0" code="" scaleX="4" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_trash" x="135" y="552" name="inst_E7DB44E2" locked="0" code="" scaleX="4" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_trash" x="220" y="552" name="inst_42947C39" locked="0" code="" scaleX="4" scaleY="3" colour="4294967295" rotation="0"/>
@@ -223,6 +223,8 @@
     <instance objName="obj_window" x="1920" y="608" name="inst_A1E2735B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_inventory" x="96" y="224" name="inst_085B8FD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_key" x="174" y="338" name="inst_762B7B04" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_npc2" x="1216" y="192" name="inst_DF166881" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_npc1" x="896" y="448" name="inst_05D104C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

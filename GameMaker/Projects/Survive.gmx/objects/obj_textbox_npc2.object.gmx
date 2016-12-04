@@ -26,21 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>//create some variables
-global.hint_text = "";
+global.hint_text2 = "";
 draw = 0;
-count  = 0;
+count = 0;
 free = true;
 //set the message
 str = "";
 
-state = script_text_idle;
+state = script_text_idle_npc2;
 
 sight_range = choose(100);
-
-
-
-sight_range = choose(100);
-
 </string>
           </argument>
         </arguments>
@@ -88,12 +83,12 @@ script_execute(state);
           <argument>
             <kind>1</kind>
             <string>/// draw the string and the box
-if(global.showText == true){
+if(global.showText2 == true){
     draw_set_font(RoughTypewriter);
     draw_set_color(c_white);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-    draw_text(view_xview[0],view_yview[0], global.hint_text);
+    draw_text(view_xview[0],view_yview[0], global.hint_text2);
 } else 
     stringText2 = "";
 

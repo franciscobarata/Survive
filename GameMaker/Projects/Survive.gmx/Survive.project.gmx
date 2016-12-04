@@ -50,6 +50,11 @@
     <script>scripts\script_text_conversation.gml</script>
     <script>scripts\script_text_conversation2.gml</script>
     <script>scripts\script_text_idle.gml</script>
+    <script>scripts\script_text_conversation_declined2.gml</script>
+    <script>scripts\script_text_idle_declined2.gml</script>
+    <script>scripts\script_text_idle_npc2.gml</script>
+    <script>scripts\script_text_idle_declined.gml</script>
+    <script>scripts\script_text_conversation_declined.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\RoughTypewriter</font>
@@ -86,6 +91,9 @@
     <object>objects\object_npc_path_test</object>
     <object>objects\Object_textbox</object>
     <object>objects\object14</object>
+    <object>objects\obj_prototype_npc1</object>
+    <object>objects\obj_prototype_npc2</object>
+    <object>objects\obj_textbox_npc2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>

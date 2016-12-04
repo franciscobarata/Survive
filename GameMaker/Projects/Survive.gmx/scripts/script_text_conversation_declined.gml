@@ -1,5 +1,4 @@
-    
-if (characters < message_length) { //if current character count is less than the amount in current message* 
+ if (characters < message_length) { //if current character count is less than the amount in current message* 
     draw = 1;
     obj_prototype_player.free = false;
     hold = keyboard_check(ord("Z")); //hold is true or false if we hold 'Z' or not
@@ -32,19 +31,22 @@ else { //if current character is more than the amount in the current message
                 global.showText = true;
                 global.hint_text = "Press 'A' to accept and 'D' to decline";
             }
-            if(keyboard_check_pressed(ord("A"))){
-                obj_prototype_npc.state = script_npc_chase;
+            if(keyboard_check_pressed(ord("A")) && count = 0){
+                obj_prototype_npc1.state = script_npc_chase;
                 global.showText = false;
                 draw = 1;
+                script_item_pickup(2);
+                count = 1;
                 obj_prototype_player.free = false;
                 message_current += 2;
                 message_length = string_length(message[message_current]);
                 characters = 0; //set the characters back to 0
                 message_draw = ""; //clear the drawn text
             }
-            else if(keyboard_check_pressed(ord("D"))){
+            else if(keyboard_check_pressed(ord("D")) && count = 0){
                 global.showText = false;
                 draw = 1;
+                count = 1;
                 obj_prototype_player.free = false;
                 message_current += 1;
                 message_length = string_length(message[message_current]);
