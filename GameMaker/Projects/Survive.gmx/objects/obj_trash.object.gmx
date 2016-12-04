@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.showText3 = false;
+            <string>global.showText3 = true;
 </string>
           </argument>
         </arguments>
@@ -48,17 +48,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_prototype_player.sprite_width, y - obj_prototype_player.sprite_height, x + sprite_width + obj_prototype_player.sprite_width, y + sprite_height + obj_prototype_player.sprite_height)) 
-{
-    showText3 = true;
+            <string>/*
+var dis = point_distance(x, y, obj_prototype_player.x , obj_prototype_player.y);
+if (true){
+    global.showText3 = true;
     if(keyboard_check(ord("Space"))) {
         //Press Space to burn
     }
     
 } else if(!place_meeting(x, y, obj_prototype_player)) {
-    showText3 = false;
+    //showText = false;
 
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -83,14 +85,14 @@
             <kind>1</kind>
             <string>draw_self();
 
-if(showText3)
+if(true)
     stringText3 = "Good stuff to burn and attract the guards";
 else 
     stringText3 = "";
 
 draw_set_font(RoughTypewriter);
 draw_set_color(c_white);
-draw_text(0,0, stringText3);
+draw_text(88,12, stringText3);
 </string>
           </argument>
         </arguments>
@@ -111,7 +113,10 @@ draw_text(0,0, stringText3);
   <PhysicsShapePoints>
     <point>0,0</point>
     <point>22,0</point>
-    <point>18,16</point>
-    <point>4,16</point>
+    <point>22,8</point>
+    <point>18,18</point>
+    <point>2,18</point>
+    <point>0,8</point>
+    <point>0,8</point>
   </PhysicsShapePoints>
 </object>
