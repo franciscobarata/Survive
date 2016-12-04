@@ -50,6 +50,8 @@
     <script>scripts\script_text_conversation.gml</script>
     <script>scripts\script_text_conversation2.gml</script>
     <script>scripts\script_text_idle.gml</script>
+    <script>scripts\script_text_conversation_declined.gml</script>
+    <script>scripts\script_text_idle_declined.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\RoughTypewriter</font>
