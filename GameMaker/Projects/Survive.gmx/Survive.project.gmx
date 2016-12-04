@@ -30,6 +30,8 @@
     <sprite>sprites\spr_infirmary_door</sprite>
     <sprite>sprites\sprite19</sprite>
     <sprite>sprites\spr_infirmary_door_left</sprite>
+    <sprite>sprites\spr_door_side</sprite>
+    <sprite>sprites\spr_window</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_prototype_floor</background>
@@ -75,6 +77,8 @@
     <object>objects\obj_infirmary_door</object>
     <object>objects\obj_infirmary_door_left</object>
     <object>objects\obj_grid</object>
+    <object>objects\obj_door_side</object>
+    <object>objects\obj_window</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>
