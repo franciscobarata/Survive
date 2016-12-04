@@ -16,15 +16,12 @@ else { //if current character is more than the amount in the current message
             characters = 0; //set the characters back to 0
             message_draw = ""; //clear the drawn text
         } else {
-            if(message_current == 8){
+            if(message_current == 7 || message_current == 8){
                 draw = 0;
                 obj_prototype_player.free = true;
-                state = script_text_idle_declined;
-            } else if (message_current == 7) {
-                draw = 0;
-                obj_prototype_player.free = true;
+                script_item_pickup(2);
                 instance_destroy(); //destroy the object
-                }
+            }
         }
         } else { //if our messages are done (we reach 6, in our case)...
             if(message_current == 6){
