@@ -77,7 +77,7 @@ else
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_prototype_obstacles">
+    <event eventtype="4" ename="obj_prototype_hiding_obstacle">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -100,7 +100,7 @@ else
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_prototype_hiding_obstacle">
+    <event eventtype="4" ename="obj_bed">
       <action>
         <libid>1</libid>
         <id>603</id>

@@ -38,54 +38,60 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\script_npc_idle.gml</script>
-    <script>scripts\script_npc_stop.gml</script>
-    <script>scripts\script_text_idle.gml</script>
+    <script>scripts\script_enemy_chase.gml</script>
+    <script>scripts\script_enemy_idle.gml</script>
+    <script>scripts\script_item_drop.gml</script>
+    <script>scripts\script_item_pickup.gml</script>
     <script>scripts\script_npc_chase.gml</script>
     <script>scripts\script_npc_conversation.gml</script>
+    <script>scripts\script_npc_conversation2.gml</script>
+    <script>scripts\script_npc_idle.gml</script>
+    <script>scripts\script_npc_stop.gml</script>
     <script>scripts\script_text_conversation.gml</script>
     <script>scripts\script_text_conversation2.gml</script>
-    <script>scripts\script_item_pickup.gml</script>
-    <script>scripts\script_item_drop.gml</script>
+    <script>scripts\script_text_idle.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\RoughTypewriter</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_prototype_player</object>
-    <object>objects\obj_prototype_npc</object>
-    <object>objects\obj_prototype_enemy</object>
-    <object>objects\obj_prototype_table</object>
-    <object>objects\obj_prototype_locker</object>
-    <object>objects\obj_prototype_wall</object>
-    <object>objects\obj_prototype_key</object>
-    <object>objects\obj_prototype_door</object>
-    <object>objects\obj_prototype_light</object>
-    <object>objects\obj_prototype_celldoor</object>
-    <object>objects\obj_prototype_background_sound</object>
-    <object>objects\obj_prototype_hiding_obstacle</object>
-    <object>objects\obj_prototype_obstacles</object>
-    <object>objects\obj_prototype_lighting</object>
-    <object>objects\obj_inventory</object>
-    <object>objects\obj_prototype_game_end_text</object>
-    <object>objects\obj_prototype_caught_text</object>
-    <object>objects\Object_textbox</object>
     <object>objects\obj_bed</object>
-    <object>objects\obj_match</object>
-    <object>objects\obj_pills</object>
-    <object>objects\obj_room3_sound</object>
+    <object>objects\obj_door_side</object>
+    <object>objects\obj_grid</object>
     <object>objects\obj_infirmary_door</object>
     <object>objects\obj_infirmary_door_left</object>
-    <object>objects\obj_grid</object>
+    <object>objects\obj_infirmary_doors</object>
+    <object>objects\obj_inventory</object>
+    <object>objects\obj_match</object>
+    <object>objects\obj_pills</object>
+    <object>objects\obj_prototype_background_sound</object>
+    <object>objects\obj_prototype_caught_text</object>
+    <object>objects\obj_prototype_celldoor</object>
+    <object>objects\obj_prototype_door</object>
+    <object>objects\obj_prototype_enemy</object>
+    <object>objects\obj_prototype_game_end_text</object>
+    <object>objects\obj_prototype_hiding_obstacle</object>
+    <object>objects\obj_prototype_key</object>
+    <object>objects\obj_prototype_light</object>
+    <object>objects\obj_prototype_lighting</object>
+    <object>objects\obj_prototype_locker</object>
+    <object>objects\obj_prototype_npc</object>
+    <object>objects\obj_prototype_obstacles</object>
+    <object>objects\obj_prototype_player</object>
+    <object>objects\obj_prototype_table</object>
+    <object>objects\obj_prototype_wall</object>
+    <object>objects\obj_room3_sound</object>
     <object>objects\obj_trash</object>
-    <object>objects\obj_door_side</object>
     <object>objects\obj_window</object>
+    <object>objects\object_npc_path_test</object>
+    <object>objects\Object_textbox</object>
+    <object>objects\object14</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>
-    <room>rooms\rm_prototype</room>
     <room>rooms\rm_prototype_caught</room>
     <room>rooms\rm_prototype_end</room>
+    <room>rooms\rm_prototype</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
