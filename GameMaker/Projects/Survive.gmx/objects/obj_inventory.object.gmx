@@ -33,6 +33,13 @@
 
 global.timer = -1;
 
+globalvar pill;
+globalvar key;
+globalvar match;
+pill = false;
+key = false;
+match = false;
+
 globalvar showInv;
 showInv = true;
 

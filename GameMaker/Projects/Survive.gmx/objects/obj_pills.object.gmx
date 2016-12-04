@@ -31,6 +31,7 @@ if (d_character &lt; self.sprite_width*2) {
     instance_destroy();
     showItemText = true;
     itemName = "pill"
+    pill = true;
 }
 </string>
           </argument>

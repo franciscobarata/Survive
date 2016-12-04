@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.showText3 = true;
+            <string>
+global.showText3 = true;
+
+
+globalvar stringText3;
+stringText3 = "wtfwtf";
 </string>
           </argument>
         </arguments>
@@ -86,13 +91,45 @@ if (true){
             <string>draw_self();
 
 if(true)
-    stringText3 = "Good stuff to burn and attract the guards";
+{ 
+    stringText3 = "Good stuff to burn, it will attract the guards..";
+}
 else 
-    stringText3 = "";
+{
+    stringText3 = "wtf";
+}
 
 draw_set_font(RoughTypewriter);
 draw_set_color(c_white);
-draw_text(88,12, stringText3);
+draw_text(120 ,610 + 12, stringText3);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (match)
+{
+    //burn
+}
+else
+    stringText3 = "You don't have nothing to burn this";
 </string>
           </argument>
         </arguments>
