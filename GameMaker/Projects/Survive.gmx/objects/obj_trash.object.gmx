@@ -3,7 +3,7 @@
   <spriteName>spr_trash</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>obj_prototype_obstacles</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,11 +26,18 @@
           <argument>
             <kind>1</kind>
             <string>
-global.showText3 = true;
+global.showText3 = false;
 
 
 globalvar stringText3;
-stringText3 = "wtfwtf";
+stringText3 = "";
+
+globalvar tryToBurn;
+tryToBurn = false;
+
+globalvar onFire;
+onFire = false;
+
 </string>
           </argument>
         </arguments>
@@ -53,19 +60,20 @@ stringText3 = "wtfwtf";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
+            <string>
 var dis = point_distance(x, y, obj_prototype_player.x , obj_prototype_player.y);
-if (true){
+if (point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_prototype_player.sprite_width, y - obj_prototype_player.sprite_height, x + sprite_width + obj_prototype_player.sprite_width, y + sprite_height + obj_prototype_player.sprite_height))
+{
     global.showText3 = true;
-    if(keyboard_check(ord("Space"))) {
-        //Press Space to burn
-    }
-    
-} else if(!place_meeting(x, y, obj_prototype_player)) {
-    //showText = false;
+    if(keyboard_check(vk_space))
+        tryToBurn = true;
+} 
+
+else if(!place_meeting(x, y, obj_prototype_player)) {
+    global.showText3 = false;
 
 }
-*/
+
 </string>
           </argument>
         </arguments>
@@ -90,46 +98,36 @@ if (true){
             <kind>1</kind>
             <string>draw_self();
 
-if(true)
+if(tryToBurn &amp;&amp; global.showText3)
+{
+    if (match)
+    {
+        stringText3 = "Lucky you";
+        instance_destroy();
+        instance_create(x - 100, y -50, obj_trash_burning)
+        {
+            obj_trash_burning.image_speed = 0.1;
+            obj_trash_burning.image_xscale = 4;
+            obj_trash_burning.image_yscale = 3;
+        }
+        onFire = true;
+    }
+    else
+        stringText3 = "You don't have nothing to burn this";
+}
+else if(global.showText3)
 { 
     stringText3 = "Good stuff to burn, it will attract the guards..";
 }
 else 
 {
-    stringText3 = "wtf";
+    stringText3 = "";
+    tryToBurn = false;
 }
 
 draw_set_font(RoughTypewriter);
 draw_set_color(c_white);
-draw_text(120 ,610 + 12, stringText3);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (match)
-{
-    //burn
-}
-else
-    stringText3 = "You don't have nothing to burn this";
+draw_text(260 , 20, stringText3);
 </string>
           </argument>
         </arguments>
