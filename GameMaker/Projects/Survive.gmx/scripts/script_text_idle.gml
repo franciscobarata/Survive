@@ -1,6 +1,6 @@
 state_text = 'idle';
 //write your messages in an array, starting at 0, like so
-message[0] = "Wait, who are you? I've never seen you here";
+message[0] = "Wait, who are you? I've never seen you here.";
 message[1] = "How are you outside?";
 message[2] = "Nevermind, you explain me later if you want!";
 message[3] = "Help me leave this place!";

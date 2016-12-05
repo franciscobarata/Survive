@@ -65,6 +65,7 @@ detectionRadius = 4;
     }
     
     if(isAware) {
+        speed = 1.5;
         detection = 8;
     } else {
         detection = 4;
@@ -88,7 +89,7 @@ detectionRadius = 4;
         if(speed == 1)
             phy_rotation = 0;
     }
-    if(onFire)
+    if(onFire &amp;&amp; !isAware)
     {
         //go check the fire
         if (phy_position_y &lt; 200)

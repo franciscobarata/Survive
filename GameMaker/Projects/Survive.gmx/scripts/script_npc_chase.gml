@@ -5,7 +5,6 @@ var px = path_get_point_x(global.grid, obj_prototype_player.x);
 var py = path_get_point_y(global.grid, obj_prototype_player.y);
 
 phy_active = true;
-global.nSaved = 1;
 
 var dis = distance_to_object(obj_prototype_player);
 var dir = point_direction(x,y, obj_prototype_player.x, obj_prototype_player.y);
@@ -25,6 +24,6 @@ if ( dis <= sight_range && dis >= stop_range){
 } else if( dis <= stop_range){
 
    state = script_npc_stop;
-
+   global.nSaved -= 1;
 }
 }

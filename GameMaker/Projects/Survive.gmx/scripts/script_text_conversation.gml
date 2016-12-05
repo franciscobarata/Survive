@@ -33,6 +33,7 @@ else { //if current character is more than the amount in the current message
             }
             if(keyboard_check_pressed(ord("A")) && count == 0){
                 obj_prototype_npc1.state = script_npc_chase;
+                global.nSaved += 1;
                 global.showText = false;
                 draw = 1;
                 count = 1;

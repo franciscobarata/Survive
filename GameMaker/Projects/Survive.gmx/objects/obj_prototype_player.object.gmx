@@ -32,6 +32,7 @@ isTouching = false;
 isStealthing = false;
 speed = 5;
 global.nSaved = 0;
+margin = 1;
 </string>
           </argument>
         </arguments>
@@ -83,7 +84,7 @@ if(keyboard_check(vk_left) || keyboard_check(ord('A')))
 var inst;
 inst = collision_circle(phy_position_x, phy_position_y, sprite_width*0.5, obj_prototype_hiding_obstacle, true, false);
 if(inst != noone) {
-    if(inst.bbox_left &lt;= phy_position_x-sprite_width*0.5 &amp;&amp; inst.bbox_top &lt;= phy_position_y-sprite_height*0.5 &amp;&amp; inst.bbox_right &gt;= phy_position_x+sprite_width*0.5 &amp;&amp; inst.bbox_bottom &gt;= phy_position_y+sprite_height*0.5)
+    if(inst.bbox_left - margin &lt;= phy_position_x-sprite_width*0.5 &amp;&amp; inst.bbox_top - margin &lt;= phy_position_y-sprite_height*0.5 &amp;&amp; inst.bbox_right + margin &gt;= phy_position_x+sprite_width*0.5 &amp;&amp; inst.bbox_bottom + margin &gt;= phy_position_y+sprite_height*0.5)
     {
         isHiding = true;
         isStealthing = true;
@@ -252,7 +253,13 @@ if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obsta
             <string>//Collide
 if(key)
 {
+    global.showText = false;
     room_goto(rm_prototype_end);
+}
+else
+{
+    global.showText = true;
+    global.hint_text = "Locked";
 }
 </string>
           </argument>

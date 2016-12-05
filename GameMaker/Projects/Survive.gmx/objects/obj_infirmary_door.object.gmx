@@ -60,7 +60,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="70">
+    <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
         <id>603</id>
