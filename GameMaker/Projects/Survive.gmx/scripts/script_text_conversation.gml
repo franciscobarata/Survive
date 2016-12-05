@@ -36,7 +36,7 @@ else { //if current character is more than the amount in the current message
                 global.showText = false;
                 draw = 1;
                 count = 1;
-                script_item_pickup(2);
+                script_item_pickup(1);
                 obj_prototype_player.free = false;
                 message_current += 1;
                 message_length = string_length(message[message_current]);

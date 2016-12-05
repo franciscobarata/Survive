@@ -30,6 +30,8 @@ obstacleHit = false;
 speed = 1.5;
 isAware = false;
 detectionRadius = 4;
+
+
 </string>
           </argument>
         </arguments>
@@ -53,39 +55,52 @@ detectionRadius = 4;
           <argument>
             <kind>1</kind>
             <string>if(obj_prototype_player.free == true){
-if(obstacleHit)
-{
-    if(!isAware)
-        phy_rotation += 180;
-    
-    //speed = speed*-1;
-    obstacleHit = false;
-}
-
-if(isAware) {
-    detection = 8;
-} else {
-    detection = 4;
-}
-
-if(!idle) {
-    phy_position_x += speed * cos(phy_rotation * pi / 180);
-    phy_position_y += speed * sin(phy_rotation * pi / 180);
-}
-
-//check if player is making sound near enemy
-if(collision_circle(phy_position_x, phy_position_y, sprite_width*detection, obj_prototype_player, false, false)) {
-    idle = false;
-    if(!obj_prototype_player.isHiding &amp;&amp; !obj_prototype_player.isStealthing) {
-        isAware = true;
-        phy_rotation = -point_direction(x, y, obj_prototype_player.x, obj_prototype_player.y);
-        //phy_rotation = arctan(phy_position_y - obj_prototype_player.phy_position_y/phy_position_x - obj_prototype_player.phy_position_x);
+    if(obstacleHit)
+    {
+        if(!isAware)
+            phy_rotation += 180;
+        
+        //speed = speed*-1;
+        obstacleHit = false;
     }
-} else {
-    isAware = false;
-    if(speed == 1)
-        phy_rotation = 0;
-}
+    
+    if(isAware) {
+        detection = 8;
+    } else {
+        detection = 4;
+    }
+    
+    if(!idle) {
+        phy_position_x += speed * cos(phy_rotation * pi / 180);
+        phy_position_y += speed * sin(phy_rotation * pi / 180);
+    }
+    
+    //check if player is making sound near enemy
+    if(collision_circle(phy_position_x, phy_position_y, sprite_width*detection, obj_prototype_player, false, false)) {
+        idle = false;
+        if(!obj_prototype_player.isHiding &amp;&amp; !obj_prototype_player.isStealthing) {
+            isAware = true;
+            phy_rotation = -point_direction(x, y, obj_prototype_player.x, obj_prototype_player.y);
+            //phy_rotation = arctan(phy_position_y - obj_prototype_player.phy_position_y/phy_position_x - obj_prototype_player.phy_position_x);
+        }
+    } else {
+        isAware = false;
+        if(speed == 1)
+            phy_rotation = 0;
+    }
+    if(onFire)
+    {
+        //go check the fire
+        if (phy_position_x &gt; 240)
+            phy_position_x -= speed;
+        else if (phy_position_y &lt; 430)            
+            phy_position_y += speed;
+        else
+        {
+            phy_rotation = 90;
+            speed = 0;
+        }
+    }
 }
 </string>
           </argument>
