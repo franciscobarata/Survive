@@ -35,7 +35,7 @@ text = '';
 
 count = 0;
 
-state = script_npc_chase;
+state = script_npc_idle;
 
 
 sight_range = choose(100);

@@ -76,10 +76,14 @@ detectionRadius = 4;
         phy_position_y += speed * sin(phy_rotation * pi / 180);
     }
     
+    
     //check if player is making sound near enemy
+    
     if(collision_circle(phy_position_x, phy_position_y, sprite_width*detection, obj_prototype_player, false, false)) {
-        idle = false;
-        if(!obj_prototype_player.isHiding &amp;&amp; !obj_prototype_player.isStealthing) {
+        idle = false;        
+        var checkWall = collision_line(phy_position_x, phy_position_y, obj_prototype_player.x, obj_prototype_player.y, obj_prototype_wall, false, false); 
+        
+        if(!checkWall &amp;&amp; !obj_prototype_player.isHiding &amp;&amp; !obj_prototype_player.isStealthing &amp;&amp; !checkWall) {
             isAware = true;
             phy_rotation = -point_direction(x, y, obj_prototype_player.x, obj_prototype_player.y);
             //phy_rotation = arctan(phy_position_y - obj_prototype_player.phy_position_y/phy_position_x - obj_prototype_player.phy_position_x);
@@ -90,7 +94,11 @@ detectionRadius = 4;
             phy_rotation = 0;
     }
     if(onFire &amp;&amp; !isAware)
-    {
+    {/*
+        mp_potential_step_object(96 + 100 * instance_number(self), 416, 2, obj_prototype_obstacles);
+        phy_position_x =  x; //lengthdir_x(2,dir);
+        phy_position_y =  y;
+    */
         //go check the fire
         if (phy_position_y &lt; 200)
         {
@@ -115,7 +123,7 @@ detectionRadius = 4;
             phy_rotation = 90;
             speed = 0;
         }
-    }
+    } 
 }
 </string>
           </argument>
