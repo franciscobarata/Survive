@@ -4,10 +4,10 @@ message[0] = "Wait, who are you? I've never seen you here";
 message[1] = "How are you outside?";
 message[2] = "Nevermind, you explain me later if you want!";
 message[3] = "Help me leave this place!";
-message[4] = "If you do, i'll give my pills";
-message[5] = "I managed to not take them";
+message[4] = "If you do, i'll give you my Matches";
+message[5] = "I managed to steal them from the kitchen";
 message[6] = "Might be helpfull for something. Will you help me?";
-message[7] = "Yes! Thank you for helping me, here, take the pills";
+message[7] = "Yes! Thank you for helping me, here, take the Matches";
 message[8] = "Oh, really? Come back again if you change your mind";
 
 message_current = 0; //0 is the first number in our array, and the message we are currently at

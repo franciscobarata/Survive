@@ -3,7 +3,7 @@ count  = 0;
 //write your messages in an array, starting at 0, like so
 message[0] = "have you changed your mind?";
 message[1] = "oh well, offer still stands";
-message[2] = "Seriously? Thank you! Here's the pills, let's go";
+message[2] = "Seriously? Thank you! Here's the Matches, let's go";
 message_current = 0; //0 is the first number in our array, and the message we are currently at
 message_end = 0; //6 is the last number in our array
 message_draw = ""; //this is what we 'write' out. It's blank right now
