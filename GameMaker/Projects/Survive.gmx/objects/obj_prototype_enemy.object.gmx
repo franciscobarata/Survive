@@ -91,8 +91,22 @@ detectionRadius = 4;
     if(onFire)
     {
         //go check the fire
-        if (phy_position_x &gt; 240)
+        if (phy_position_y &lt; 200)
+        {
+            target_dir = point_direction(phy_position_x, phy_position_y, 1920, 200);
+            ldx = lengthdir_x(1.0, target_dir);
+            ldy = lengthdir_y(1.0, target_dir);
+            phy_position_x += ldx - sin(target_dir);
+            phy_position_y += ldy - cos(target_dir);
+        }
+        
+        else if(phy_position_y &lt; 300)
+            phy_position_y += speed;        
+        else if (phy_position_x &gt; 240)
+        {
             phy_position_x -= speed;
+            phy_rotation = 180;
+        }
         else if (phy_position_y &lt; 430)            
             phy_position_y += speed;
         else

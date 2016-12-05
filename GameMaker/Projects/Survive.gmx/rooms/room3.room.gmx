@@ -54,7 +54,7 @@
     <instance objName="obj_textbox_npc2" x="1216" y="192" name="inst_D692FA32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Object_textbox" x="864" y="416" name="inst_32EDCF9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grid" x="96" y="96" name="inst_FEF8D313" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_prototype_player" x="64" y="352" name="inst_6FE5D2CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_prototype_player" x="96" y="352" name="inst_6FE5D2CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_enemy" x="2016" y="320" name="inst_FB847355" locked="0" code="idle = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_light" x="2016" y="320" name="inst_50E771A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_lighting" x="2016" y="320" name="inst_05F6DBEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -171,13 +171,11 @@
     <instance objName="obj_infirmary_door" x="416" y="384" name="inst_41303242" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door" x="1184" y="224" name="inst_F9C95419" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door" x="1344" y="384" name="inst_10B3DB9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_infirmary_door" x="1888" y="224" name="inst_DE889E09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door" x="2016" y="384" name="inst_21C3D787" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door_left" x="448" y="384" name="inst_453D2313" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door_left" x="704" y="224" name="inst_A4510BE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door_left" x="1216" y="224" name="inst_A8233B2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door_left" x="1376" y="384" name="inst_06FBCA54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_infirmary_door_left" x="1920" y="224" name="inst_9E2527B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door_left" x="2048" y="384" name="inst_3BAFBE3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_infirmary_door_left" x="928" y="384" name="inst_F3BE8404" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_wall" x="0" y="352" name="inst_58E43181" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
@@ -227,7 +225,6 @@
     <instance objName="obj_prototype_npc1" x="896" y="448" name="inst_05D104C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pills" x="160" y="320" name="inst_23A8C449" locked="0" code="" scaleX="1.29999995231628" scaleY="1.39999997615814" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_locker" x="160" y="32" name="inst_13AAEA6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_match" x="128" y="384" name="inst_81D411FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
