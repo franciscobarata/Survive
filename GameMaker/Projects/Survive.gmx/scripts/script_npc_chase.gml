@@ -1,4 +1,5 @@
 state_text = 'chasing';
+
 if(obj_prototype_player.free == true){
 var px = path_get_point_x(global.grid, obj_prototype_player.x);
 var py = path_get_point_y(global.grid, obj_prototype_player.y);
