@@ -33,6 +33,7 @@
     <sprite>sprites\spr_window</sprite>
     <sprite>sprites\spr_door_side</sprite>
     <sprite>sprites\spr_trash_burning</sprite>
+    <sprite>sprites\spr_safe_box</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_prototype_floor</background>
@@ -96,6 +97,7 @@
     <object>objects\obj_prototype_npc2</object>
     <object>objects\obj_textbox_npc2</object>
     <object>objects\obj_trash_burning</object>
+    <object>objects\obj_safe_box</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>

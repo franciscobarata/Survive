@@ -139,7 +139,7 @@ if global.timer!=-1
         
         draw_set_font(RoughTypewriter);
         draw_set_color(c_white);
-        draw_text(120 , y2 + 14, stringText + itemName);
+        draw_text(x1 + 120 , y1 + y2 + 14, stringText + itemName);
     }  
 }
 
