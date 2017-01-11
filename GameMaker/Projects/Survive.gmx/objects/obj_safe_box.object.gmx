@@ -29,7 +29,11 @@
 
 
 globalvar stringText4;
-stringText4 = "dafuq";
+stringText4 = "";
+
+
+global.time = -1;
+
 </string>
           </argument>
         </arguments>
@@ -57,8 +61,11 @@ var dis = point_distance(x, y, obj_prototype_player.x , obj_prototype_player.y);
 if (dis &lt; 100)//point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_prototype_player.sprite_width, y - obj_prototype_player.sprite_height, x + sprite_width + obj_prototype_player.sprite_width, y + sprite_height + obj_prototype_player.sprite_height))
 {
     global.showText4 = true;
-    if(keyboard_check(vk_space))
-        tryToOpen = true;
+    
+    if(keyboard_check(vk_space) || global.time != -1)
+        stringText4 = "You need a code";
+    else
+        stringText4 = "This safe might contain something useful...";    
 } 
 
 else if(!place_meeting(x, y, obj_prototype_player)) {
@@ -66,6 +73,14 @@ else if(!place_meeting(x, y, obj_prototype_player)) {
 
 }
 
+if (global.showText4 &amp;&amp; keyboard_check(vk_space) &amp;&amp; global.time==-1)
+{
+   global.time = 90;
+}
+if global.time!=-1
+{
+    global.time--;
+}
 </string>
           </argument>
         </arguments>
@@ -92,7 +107,7 @@ else if(!place_meeting(x, y, obj_prototype_player)) {
 
 if(global.showText4)
 { 
-    stringText4 = "This safe might contain something useful...";
+    //stringText4 = "This safe might contain something useful...";
 }
 else 
 {
