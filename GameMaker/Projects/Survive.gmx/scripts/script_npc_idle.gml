@@ -1,3 +1,3 @@
 //idle
 
-phy_active = false;
+phy_active = true;

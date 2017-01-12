@@ -29,7 +29,9 @@
 obstacleHit = false;
 speed = 1.5;
 isAware = false;
+wasAware = false;
 detectionRadius = 4;
+instance = instance_nearest(x, y, obj_prototype_light);
 
 
 </string>
@@ -67,11 +69,19 @@ detectionRadius = 4;
     if(isAware) {
         speed = 1.5;
         detection = 8;
+        var inst = instance_find(obj_prototype_player, 0);
+        mp_potential_step_object(inst.x, inst.y, 2, obj_prototype_avoidable_obstacle);
+        phy_position_x =  x; //lengthdir_x(2,dir);
+        phy_position_y =  y;
     } else {
         detection = 4;
     }
-    
-    if(!idle) {
+    if (wasAware){
+        show_debug_message("wasAware");
+        if (instance.variation == 60)
+            phy_rotation += 180;
+    }
+    if(!idle &amp;&amp; !isAware &amp;&amp; !wasAware) {
         phy_position_x += speed * cos(phy_rotation * pi / 180);
         phy_position_y += speed * sin(phy_rotation * pi / 180);
     }
@@ -85,11 +95,15 @@ detectionRadius = 4;
         
         if(!checkWall &amp;&amp; !obj_prototype_player.isHiding &amp;&amp; !obj_prototype_player.isStealthing &amp;&amp; !checkWall) {
             isAware = true;
+            wasAware = false;
             phy_rotation = -point_direction(x, y, obj_prototype_player.x, obj_prototype_player.y);
             //phy_rotation = arctan(phy_position_y - obj_prototype_player.phy_position_y/phy_position_x - obj_prototype_player.phy_position_x);
         }
     } else {
-        isAware = false;
+        if(isAware){
+            isAware = false;
+            wasAware = true;
+        }
         if(speed == 1)
             phy_rotation = 0;
     }
