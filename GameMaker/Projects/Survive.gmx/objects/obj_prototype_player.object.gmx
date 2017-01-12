@@ -33,6 +33,7 @@ isStealthing = false;
 speed = 5;
 global.nSaved = 0;
 margin = 1;
+instance = instance_nearest(x, y, obj_prototype_enemy);
 </string>
           </argument>
         </arguments>
@@ -56,6 +57,7 @@ margin = 1;
           <argument>
             <kind>1</kind>
             <string>if(free == true){
+instance = instance_nearest(x, y, obj_prototype_enemy);
 if(keyboard_check(vk_down) || keyboard_check(ord('S')))
 {
     phy_rotation = 90;
@@ -226,8 +228,10 @@ if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obsta
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!isHiding)
+            <string>if(instance.isAware){
+    show_debug_message("isAware");
     room_goto(rm_prototype_caught);
+}
 </string>
           </argument>
         </arguments>

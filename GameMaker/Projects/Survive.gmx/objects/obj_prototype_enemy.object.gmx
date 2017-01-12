@@ -77,7 +77,6 @@ instance = instance_nearest(x, y, obj_prototype_light);
         detection = 4;
     }
     if (wasAware){
-        show_debug_message("wasAware");
         if (instance.variation == 60)
             phy_rotation += 180;
     }
