@@ -10,12 +10,13 @@ take us by force, I tried to fight them . . . ";
 message[4] = "And then, the world fell apart . . .";
 message[5] = "They killed them . . .";
 message[6] = "Just to show them as lesson to the other jews in my neighborhood.
-I have no more reason to live except to survive somehow and help whoever is trying to kill these bastards.
+I have no more reason to live except to survive somehow and help whoever is trying to kill 
+these bastards.
 You are my only hope to leave this place and fulfill my revenge, in exchange i'll give you my 
 force and these matches I found.
 You are my only hope . . .";
 message[7] = "Yes! Thank you for helping me, here, take the Matches";
-message[8] = "Oh, really? Come back again if you change your mind";
+message[8] = "Oh, really? Well, guess i'll just wait for another oportunity";
 
 message_current = 0; //0 is the first number in our array, and the message we are currently at
 message_end = 6; //6 is the last number in our array

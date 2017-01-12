@@ -1,9 +1,12 @@
 state_text = 'idle';
 //write your messages in an array, starting at 0, like so
-message[0] = "Are you free? Please help!";
-message[1] = "I can't take this anymore, I don't have anything but please, help!";
-message[2] = "I can't survive alone, I need help.";
-message[3] = "I beg you!";
+message[0] = "Who are you? You are new? OH, no, I fiigured you out! You escaped somehow!";
+message[1] = "Please help me leave, they force me to work hard, I never did 
+anything like this in my life. It's horrible, I have my hands dirty and they wont let me 
+wash them, how mean!";
+message[2] = "I can't survive for much in here, I need help from you, I have . . . . . . .
+Well . . . . . . I would stay alive for longer if you helped me.";
+message[3] = "I beg you! Can't stand having my hands dirty anymore, this is killing me.";
 message[4] = "Oh my God, thank you! You will not regret it, i'll help in whatever I can!";
 message[5] = "No please don't leave me here!";
 
