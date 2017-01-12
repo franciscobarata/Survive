@@ -65,7 +65,7 @@ instance = instance_nearest(x, y, obj_prototype_light);
         //speed = speed*-1;
         obstacleHit = false;
     }
-    
+
     if(isAware) {
         speed = 1.5;
         detection = 8;
@@ -73,9 +73,13 @@ instance = instance_nearest(x, y, obj_prototype_light);
         mp_potential_step_object(inst.x, inst.y, 2, obj_prototype_avoidable_obstacle);
         phy_position_x =  x; //lengthdir_x(2,dir);
         phy_position_y =  y;
+    } else if (obj_prototype_player.isRunning) {
+        show_debug_message("isRunning");
+        detection = 6.5;
     } else {
         detection = 4;
     }
+    
     if (wasAware){
         if (instance.variation == 60)
             phy_rotation += 180;
