@@ -98,6 +98,12 @@ instance = instance_nearest(x, y, obj_prototype_light);
             phy_rotation = -point_direction(x, y, obj_prototype_player.x, obj_prototype_player.y);
             //phy_rotation = arctan(phy_position_y - obj_prototype_player.phy_position_y/phy_position_x - obj_prototype_player.phy_position_x);
         }
+    else if (collision_circle(phy_position_x, phy_position_y, sprite_width, obj_prototype_player, false, false)){
+            isAware = true;
+            wasAware = false;
+            phy_rotation = -point_direction(x, y, obj_prototype_player.x, obj_prototype_player.y);
+    }
+    
     } else {
         if(isAware){
             isAware = false;

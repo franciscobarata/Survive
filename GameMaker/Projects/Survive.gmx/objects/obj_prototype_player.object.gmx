@@ -177,7 +177,7 @@ if(instance_place(phy_position_x, phy_position_y, obj_prototype_celldoor)) {
           <argument>
             <kind>1</kind>
             <string>//
-
+    
 </string>
           </argument>
         </arguments>
