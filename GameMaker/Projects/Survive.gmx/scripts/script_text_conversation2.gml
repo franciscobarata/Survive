@@ -2,10 +2,15 @@
 if (characters < message_length) { //if current character count is less than the amount in current message* 
     draw = 1;
     obj_prototype_player.free = false;
-    hold = keyboard_check(ord("Z")); //hold is true or false if we hold 'Z' or not
-    characters += increase * (1 + hold); //increase speed based on hold
+    
+     if (keyboard_check_pressed(ord("Z"))) {
+        characters = message_length;
+     }
+     else {
+        characters += increase * (1 + hold);
+     }
     message_draw = string_copy(message[message_current], 0, characters); //copy string to current character
-} 
+}
 else { //if current character is more than the amount in the current message
     if (keyboard_check_pressed(ord("Z"))) { //if we press Z...
         if (message_current < message_end) { //if there are more messages left to show (0 -> 6, in our case)
