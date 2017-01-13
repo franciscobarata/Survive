@@ -7,7 +7,184 @@
   <persistent>0</persistent>
   <parentName>obj_prototype_avoidable_obstacle</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.showText = false;
+phy_active = true;
+moved = false;
+startPosX = x;
+startPosY = y;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//showText = obj_prototype_player.isHiding;
+if(point_in_rectangle(obj_prototype_player.x, obj_prototype_player.y, x - obj_prototype_player.sprite_width, y - obj_prototype_player.sprite_height, x + sprite_width + obj_prototype_player.sprite_width, y + sprite_height + obj_prototype_player.sprite_height)) 
+//if(collision_rectangle(phy_position_x, phy_position_y, phy_position_x + sprite_width, phy_position_y + sprite_height, obj_prototype_player, false, false))
+{
+    showText = true;
+    if(keyboard_check(ord("H"))) {
+        image_alpha = 0.55;
+        phy_active = false;
+    }
+    
+} else if(!place_meeting(x, y, obj_prototype_player)) {
+    showText = false;
+    image_alpha = 1.0;
+    phy_active = true;
+}
+
+if(round(phy_rotation) != 0 || round(x) != round(startPosX) || round(y) != round(startPosY))
+    moved = true;
+else
+    moved = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_prototype_wall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//collide
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_infirmary_doors">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//COLLIDE
+if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obstacle.x, obj_prototype_hiding_obstacle.y, obj_prototype_hiding_obstacle.x + obj_prototype_hiding_obstacle.sprite_width, obj_prototype_hiding_obstacle.y + obj_prototype_hiding_obstacle.sprite_height)) {
+    isHiding = true;
+} else {
+    isHiding = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_infirmary_door_left">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//COLLIDE
+if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obstacle.x, obj_prototype_hiding_obstacle.y, obj_prototype_hiding_obstacle.x + obj_prototype_hiding_obstacle.sprite_width, obj_prototype_hiding_obstacle.y + obj_prototype_hiding_obstacle.sprite_height)) {
+    isHiding = true;
+} else {
+    isHiding = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_infirmary_door">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//COLLIDE
+if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obstacle.x, obj_prototype_hiding_obstacle.y, obj_prototype_hiding_obstacle.x + obj_prototype_hiding_obstacle.sprite_width, obj_prototype_hiding_obstacle.y + obj_prototype_hiding_obstacle.sprite_height)) {
+    isHiding = true;
+} else {
+    isHiding = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>

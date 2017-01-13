@@ -1,6 +1,6 @@
 state_text = 'idle';
 //write your messages in an array, starting at 0, like so
-message[0] = "Who are you? You are new? OH, no, I fiigured you out! You escaped somehow!";
+message[0] = "Who are you? You are new? OH, no, I figured you out! You escaped somehow!";
 message[1] = "Please help me leave, they force me to work hard, I never did 
 anything like this in my life. It's horrible, I have my hands dirty and they wont let me 
 wash them, how mean!";

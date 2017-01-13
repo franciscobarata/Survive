@@ -21,8 +21,15 @@ if ( dis <= sight_range && dis >= stop_range)
     var px = path_get_point_x(global.grid, obj_prototype_player.x);
     var py = path_get_point_y(global.grid, obj_prototype_player.y);
     */
+    if(obj_prototype_player.isRunning){
+        spd = 3;
+    }
+    else {
+        spd = 2;
+    }
+    
     var inst = instance_find(obj_prototype_player, 0);
-    mp_potential_step_object(inst.x, inst.y, 2, obj_prototype_avoidable_obstacle);
+    mp_potential_step_object(inst.x, inst.y, spd, obj_prototype_avoidable_obstacle);
     phy_position_x =  x; //lengthdir_x(2,dir);
     phy_position_y =  y; //lengthdir_y(2,dir);    
 } 

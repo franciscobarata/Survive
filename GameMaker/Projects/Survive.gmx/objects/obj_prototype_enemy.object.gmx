@@ -70,7 +70,7 @@ instance = instance_nearest(x, y, obj_prototype_light);
         speed = 1.5;
         detection = 8;
         var inst = instance_find(obj_prototype_player, 0);
-        mp_potential_step_object(inst.x, inst.y, 2, obj_prototype_avoidable_obstacle);
+        mp_potential_step_object(inst.x, inst.y, 2, obj_prototype_wall);
         phy_position_x =  x; //lengthdir_x(2,dir);
         phy_position_y =  y;
     } else if (obj_prototype_player.isRunning) {

@@ -40,7 +40,7 @@ state = script_npc_idle;
 
 sight_range = choose(100);
 
-spd = 3;
+spd = 0;
 
 stop_range = 10;
 
