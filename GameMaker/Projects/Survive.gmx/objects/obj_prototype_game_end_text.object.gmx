@@ -79,7 +79,6 @@ else
 draw_set_font(RoughTypewriter);
 draw_set_color(c_white);
 draw_text(room_width*0.5, room_height*0.5 + 48, "You survived - for now.");
-draw_text(room_width*0.5,room_height*0.5 + 64, text);
 draw_text(room_width*0.5, room_height*0.5 + 80,"Click anywhere to restart.");
 </string>
           </argument>
