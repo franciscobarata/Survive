@@ -265,16 +265,7 @@ if(point_in_rectangle(phy_position_x, phy_position_y, obj_prototype_hiding_obsta
           <argument>
             <kind>1</kind>
             <string>//Collide
-if(key)
-{
-    global.showText = false;
-    room_goto(rm_prototype_end);
-}
-else
-{
-    global.showText = true;
-    global.hint_text = "Locked";
-}
+
 </string>
           </argument>
         </arguments>
