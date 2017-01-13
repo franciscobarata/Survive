@@ -179,7 +179,6 @@
     <instance objName="obj_prototype_locker" x="192" y="60" name="inst_13AAEA6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_wall" x="162" y="34" name="inst_87D99AFC" locked="0" code="" scaleX="0.100000001490116" scaleY="2" colour="4294967295" rotation="5.30000019073486"/>
     <instance objName="obj_prototype_wall" x="224" y="28" name="inst_F6CD5679" locked="0" code="" scaleX="0.100000001490116" scaleY="2.20000004768372" colour="4294967295" rotation="-2.40000009536743"/>
-    <instance objName="obj_match" x="128" y="384" name="inst_6EEAE61B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_safe_box" x="1680" y="70" name="inst_1C2FC3C1" locked="0" code="" scaleX="3" scaleY="2.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_wall" x="480" y="0" name="inst_21D4CFF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_prototype_wall" x="768" y="0" name="inst_4D41D81C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
