@@ -81,8 +81,6 @@ instance = instance_nearest(x, y, obj_prototype_light);
     }
     
     if (wasAware){
-        if (instance.variation == 60)
-            phy_rotation += 180;
     }
     if(!idle &amp;&amp; !isAware &amp;&amp; !wasAware) {
         phy_position_x += speed * cos(phy_rotation * pi / 180);
