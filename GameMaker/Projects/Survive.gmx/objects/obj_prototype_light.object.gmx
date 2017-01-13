@@ -89,7 +89,8 @@ instance = instance_nearest(x, y, obj_prototype_enemy);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance.isAware = true;
+            <string>if(!(obj_prototype_player.isHiding))
+    instance.isAware = true;
 </string>
           </argument>
         </arguments>
