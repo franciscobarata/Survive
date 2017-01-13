@@ -137,7 +137,7 @@ draw_text(view_xview[0] + 240 , view_yview[0] + 16, stringText4);
   <PhysicsShapePoints>
     <point>0,0</point>
     <point>20,0</point>
-    <point>20,30</point>
-    <point>0,30</point>
+    <point>20,32</point>
+    <point>0,32</point>
   </PhysicsShapePoints>
 </object>
